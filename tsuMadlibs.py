@@ -13,30 +13,32 @@ Original file is located at
 
 #importing things here
 import os
-from google.colab import output
-from google.colab import widgets
-from IPython.display import HTML, display
+import streamlit as st
 import textwrap
+
+#streamlit formatting/functionality
+madlib_choice = st.selectbox('Select a Madlib to play!', ('The Lonely Companion', '...You just lost my business'))
+
 
 #defining functions here
 
 
 ## creating user input for variables then placing the variables inside of the actual madlib story
 def madlib1():
-
-        noun = input(' enter a noun: ' )
-        noun2 =  input(' enter another noun: ' ) 
-        verb =   input('enter a verb(ing):  ' ) 
-        verb2 =   input('enter a different verb(ing):  ' )
-        bodys =  input('enter a body part (plural):  ' ) 
-        emo =  input('enter an emotion:  ' ) 
-        adj =  input('enter an adjective:  ' ) 
-        adj2 =  input('enter a second adjective:  ' )
-        adj3 =  input('enter a third adjective:  ' )
-        name =  input('enter a male name:  ' ) 
-        name2 =  input('enter a female name:  ' )
-        drink = input('enter a type of drink: ') 
-        city = input('enter a city: ')
+       with st.form(keys= ml1v)
+        noun = st.text_input(' enter a noun: ' )
+        noun2 =  st.text_input(' enter another noun: ' ) 
+        verb =   st.text_input('enter a verb(ing):  ' ) 
+        verb2 =   st.text_input('enter a different verb(ing):  ' )
+        bodys =  st.text_input('enter a body part (plural):  ' ) 
+        emo =  st.text_input('enter an emotion:  ' ) 
+        adj =  st.text_input('enter an adjective:  ' ) 
+        adj2 =  st.text_input('enter a second adjective:  ' )
+        adj3 =  st.text_input('enter a third adjective:  ' )
+        name =  st.text_input('enter a male name:  ' ) 
+        name2 =  st.text_input('enter a female name:  ' )
+        drink = st.text_input('enter a type of drink: ') 
+        city = st.text_input('enter a city: ')
 
         stry = ('\033[1m' + '\033[3m' + name  + '\033[0m' + '\033[1m' + ' looked at the ' + '\033[3m' + adj3 + ' ' + noun + ' in his hands and felt ' + '\033[3m' + emo + '\033[0m' + '\033[1m' + '. He walked over to the window and reflected on his ' + '\033[3m' + adj2 + '\033[0m' + '\033[1m' + ' surroundings. He had always loved ' 
          '\033[3m' + adj + ' ' + city + '\033[0m' + '\033[1m' + ' with its many mountains. It was a place that encouraged his tendency to feel ' + '\033[3m' + emo + '\033[0m' + '\033[1m' + '. Then he saw something in the distance, or rather someone. It was the figure' 
@@ -56,15 +58,15 @@ def madlib1():
        
        
 def  madlib2():
-
-        noun = input(' enter a noun: ' )
-        cash1 =   input('enter number:  ' ) 
-        cash2 =   input('enter another number:  ' )
-        name =  input('enter a name:  ' ) 
-        emo =  input('enter an emotion(-ness or -ion):  ' ) 
-        adj =  input('enter an adjective:  ' ) 
-        adj2 =  input('enter a second adjective:  ' )
-        gender =  input('boy or girl:  ' ) 
+       with st.form(keys = ml2v)
+        noun = st.text_input(' enter a noun: ' )
+        cash1 =   st.text_input('enter number:  ' ) 
+        cash2 =   st.text_input('enter another number:  ' )
+        name =  st.text_input('enter a name:  ' ) 
+        emo =  st.text_input('enter an emotion(-ness or -ion):  ' ) 
+        adj =  st.text_input('enter an adjective:  ' ) 
+        adj2 =  st.text_input('enter a second adjective:  ' )
+        gender =  st.text_input('boy or girl:  ' ) 
 
         stry =  ('\033[1m' + '\033[3m' + emo + '\033[0m' + '\033[1m' + ' was on the rise. I had to buy a new car. How much would it cost? $' + '\033[3m' + cash1 + '\033[0m' + '\033[1m' + '? $' + '\033[3m' + cash2 + '\033[0m' + '\033[1m' + '? I had no clue but I knew it would be expensive.'
 'I got to the dealership, and the salesman did not seem very knowledgeable about cars. He was wearing a tight-fitting ' + '\033[3m'  + adj2 + '\033[0m' + '\033[1m' + ' suit that looked like it was about to burst at the seams and his hair looked like he had just been electrocuted. When I asked him which one he recommended, he said that he was really fond of the car with ' + '\033[3m' + adj + '\033[0m' + '\033[1m' + ' wheels. '
@@ -83,7 +85,7 @@ def mlc():
 ## asks user if they would like to run the application over again
 def WPA(): #wanna play again?
       while True:
-       Answer = input(' Would you like to play this Madlib again?: ')
+       Answer = st.text_input(' Would you like to play this Madlib again?: ')
        if Answer == 'yes' or Answer == 'Yes':
         mlc()
         output.clear()
@@ -94,17 +96,16 @@ def WPA(): #wanna play again?
 
 """# *OK, we can play now!*"""
 
-#@title Choose which madlib to play!
-madlib_choice = "Lost my business" #@param ["The lonely companion", "Lost my business"]
+st.title('Choose which madlib to play!')
+
 # code to play
 
 ## call madlib function
 
-if madlib_choice == 'The lonely companion':
+if madlib_choice == 'The Lonely Companion':
  madlib1()
 else:
  madlib2()
-output.
 ## just a separator so its easier on your eyes
 print('------------------------------------------------------------')
 
