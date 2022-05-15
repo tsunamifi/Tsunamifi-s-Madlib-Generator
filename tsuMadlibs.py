@@ -52,12 +52,12 @@ def madlib1():
     with Cover:
         st.image(c1)
     
-        stry = (name + ' looked at the ' + adj3 + noun + ' in his hands and felt '  +  emo  +    '. He walked over to the window and reflected on his '  +  adj2   +   ' surroundings. He had always loved ' 
+        stry = (name + ' looked at the ' + adj3 + noun + ' in his hands and felt '  +  emo  +    '. He walked over to the window and reflected on his '  +  adj2   +   ' surroundings. He had always loved ' +
            adj  +  city  +    ' with its many mountains. It was a place that encouraged his tendency to feel '  +  emo    +  '. Then he saw something in the distance, or rather someone. It was the figure' 
          ' of '  +  name2   +   '. '  +  name2 + ' was a gentle saint with flawless ' +   bodys  +    ' and a heart filled with ambition. '  +  name   +   ' was shocked. His friends saw him as a helpful hero. Once, he had even helped a puppy cross the road. But not even a remarkable person who had once helped a puppy cross the road, was ' 
          'prepared for what '  +  name2   +   ' had in store today. "The warrior exams ended, and all the others are '  +  verb   +   ' with their partners", making ' +   name2   +   ' sad. As ' +   name   +   ' stepped '
          'outside and '   + name2  +    ' came closer, he could see the shivering glint in her eye. '  +  name2   +   ' looked with the pain on her face. She said, in frustration, "There is no one left for me. ' 
-         'I want a partnership, I want to fight and do good with you." '  +  name +     ' looked back, and still fidgeting with the '    adj3  ' '  noun      ', "'    name2      ', you really want to be my partner?", he replied. ' 
+         'I want a partnership, I want to fight and do good with you." '  +  name +     ' looked back, and still fidgeting with the '    adj3  ' '  noun      ', "'    name2      ', you really want to be my partner?", he replied. ' +
            name   +   ' thought it over, and decided it was better than having to keep '  +   verb2  +    ' all these foes by him self, '  +   name    +   ' could use '  +   name2  +     's flawless '   +  bodys  +     ' and heart of ambition. "Its settled' 
          ', we are a team now." revealed '  +  name   +   ' with a grin. '  +  name2 +     ' looked happy, her emotions erupting like a noisy '   + noun2    +  '. Then '   + name2    +  ' came inside for a nice drink of '   + drink +
          
