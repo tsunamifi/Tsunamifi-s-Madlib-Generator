@@ -65,7 +65,7 @@ def madlib1():
        
   
        
-       if submit:
+    if submit:
         st.write(textwrap.fill(stry, 150)) 
        
        
@@ -92,7 +92,7 @@ def  madlib2():
 ' He laughed and said, "No. It is actually a term of endearment in our industry. I then smiled and said, "In that case  '  +  name    +  ', I am NOT buying your car."')
         
         
-       if submit:
+    if submit:
           st.write(textwrap.fill(stry, 80))
 
 def mlc():
