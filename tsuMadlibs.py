@@ -83,18 +83,18 @@ def  madlib2():
         submit = st.form_submit_button('Submit')
     with Cover2:
         st.image(c2)
+        if submit:
+          st.write(textwrap.fill(stry, 80))
 
         
-    stry =  (    emo  +    ' was on the rise. I had to buy a new car. How much would it cost? $'  +  cash1   +   '? $'  +  cash2  +    '? I had no clue but I knew it would be expensive.'
+    stry =  (    emo  +    ' was on the rise. I had to buy a new car. How much would it cost? $'  +  cash1   +   ' ?   $'  +  cash2  +    ' ? I had no clue but I knew it would be expensive.'
 'I got to the dealership, and the salesman did not seem very knowledgeable about cars. He was wearing a tight-fitting '  +   adj2    +  ' suit that looked like it was about to burst at the seams and his hair looked like he had just been electrocuted. When I asked him which one he recommended, he said that he was really fond of the car with ' +   adj   +   ' wheels. '
 ' He slaps the roof of car with the ' +   adj  +    ' wheels and says "This bad '   + gender  +    ' can fit so many ' +   noun    +  ' in it" '
 'I asked the salesman what his name was and he replied, "' +   name   +   "'. I said, "  +  name   +   ', would you be offended if I called you a terrible car salesman?" '
 ' He laughed and said, "No. It is actually a term of endearment in our industry. I then smiled and said, "In that case  '  +  name    +  ', I am NOT buying your car."')
         
         
-    if submit:
-          st.write(textwrap.fill(stry, 80))
-
+    
 def mlc():
     if madlib_choice == 'The lonely companion':
        madlib1()
