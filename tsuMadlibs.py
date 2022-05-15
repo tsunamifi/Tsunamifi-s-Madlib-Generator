@@ -15,7 +15,7 @@ Original file is located at
 import os
 import streamlit as st
 import textwrap
-from PIL import image
+from PIL import Image
 
 #streamlit formatting/functionality
 st.title('Choose which madlib to play!')
