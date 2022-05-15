@@ -15,16 +15,28 @@ Original file is located at
 import os
 import streamlit as st
 import textwrap
+from PIL import image
 
 #streamlit formatting/functionality
-madlib_choice = st.selectbox('Select a Madlib to play!', ('The Lonely Companion', '...You just lost my business'))
+st.title('Choose which madlib to play!')
+madlib_choice = st.selectbox('', ('The Lonely Companion', '...You just lost my business'))
+ML1, Cover = st.columns(2)
+ML2, Cover2 = st.columns(2)
 
-
+## importing story(book) covers
+c1 = Image.open('LonelyCompanionMLcover.png')
+c2 = Image.open('LMBMLcover.png')
+with Cover:
+    st.image(c1)
+    
+with Cover2:
+    st.image(c2)
 #defining functions here
 
 
 ## creating user input for variables then placing the variables inside of the actual madlib story
 def madlib1():
+    with ML1:
        with st.form(key= 'ml1v'):
         noun = st.text_input(' enter a noun: ' )
         noun2 =  st.text_input(' enter another noun: ' ) 
@@ -39,7 +51,8 @@ def madlib1():
         name2 =  st.text_input('enter a female name:  ' )
         drink = st.text_input('enter a type of drink: ') 
         city = st.text_input('enter a city: ')
-
+        submit = st.form_submit_button('Submit')
+        
         stry = ('\033[1m' + '\033[3m' + name  + '\033[0m' + '\033[1m' + ' looked at the ' + '\033[3m' + adj3 + ' ' + noun + ' in his hands and felt ' + '\033[3m' + emo + '\033[0m' + '\033[1m' + '. He walked over to the window and reflected on his ' + '\033[3m' + adj2 + '\033[0m' + '\033[1m' + ' surroundings. He had always loved ' 
          '\033[3m' + adj + ' ' + city + '\033[0m' + '\033[1m' + ' with its many mountains. It was a place that encouraged his tendency to feel ' + '\033[3m' + emo + '\033[0m' + '\033[1m' + '. Then he saw something in the distance, or rather someone. It was the figure' 
          ' of ' + '\033[3m' + name2 + '\033[0m' + '\033[1m' + '. ' + '\033[3m' + name2 + ' was a gentle saint with flawless ' + '\033[3m' + bodys + '\033[0m' + '\033[1m' + ' and a heart filled with ambition. ' + '\033[3m' + name + '\033[0m' + '\033[1m' + ' was shocked. His friends saw him as a helpful hero. Once, he had even helped a puppy cross the road. But not even a remarkable person who had once helped a puppy cross the road, was ' 
@@ -53,11 +66,12 @@ def madlib1():
        
   
        
-      
-        print(textwrap.fill(stry, 80)) 
+      if submit:
+        st.write(textwrap.fill(stry, 80)) 
        
        
 def  madlib2():
+    with ML2:
        with st.form(key = 'ml2v'):
         noun = st.text_input(' enter a noun: ' )
         cash1 =   st.text_input('enter number:  ' ) 
@@ -67,14 +81,17 @@ def  madlib2():
         adj =  st.text_input('enter an adjective:  ' ) 
         adj2 =  st.text_input('enter a second adjective:  ' )
         gender =  st.text_input('boy or girl:  ' ) 
-
+        submit = st.form_submit_button('Submit')
+        
         stry =  ('\033[1m' + '\033[3m' + emo + '\033[0m' + '\033[1m' + ' was on the rise. I had to buy a new car. How much would it cost? $' + '\033[3m' + cash1 + '\033[0m' + '\033[1m' + '? $' + '\033[3m' + cash2 + '\033[0m' + '\033[1m' + '? I had no clue but I knew it would be expensive.'
 'I got to the dealership, and the salesman did not seem very knowledgeable about cars. He was wearing a tight-fitting ' + '\033[3m'  + adj2 + '\033[0m' + '\033[1m' + ' suit that looked like it was about to burst at the seams and his hair looked like he had just been electrocuted. When I asked him which one he recommended, he said that he was really fond of the car with ' + '\033[3m' + adj + '\033[0m' + '\033[1m' + ' wheels. '
 ' He slaps the roof of car with the ' + '\033[3m' + adj + '\033[0m' + '\033[1m' + ' wheels and says "This bad ' + '\033[3m' + gender + '\033[0m' + '\033[1m' + ' can fit so many ' + '\033[3m' + noun + '\033[0m' + '\033[1m' + ' in it" '
 'I asked the salesman what his name was and he replied, "' + '\033[3m' + name + '\033[0m' + '\033[1m' + "'. I said, " + '\033[3m' + name + '\033[0m' + '\033[1m' + ', would you be offended if I called you a terrible car salesman?" '
 ' He laughed and said, "No. It is actually a term of endearment in our industry. I then smiled and said, "In that case  ' + '\033[3m' + name + '\033[0m' + '\033[1m' + ', I am NOT buying your car."')
-
-        print(textwrap.fill(stry, 80))
+        
+        
+        if submit:
+          st.write(textwrap.fill(stry, 80))
 
 def mlc():
     if madlib_choice == 'The lonely companion':
@@ -85,7 +102,7 @@ def mlc():
 ## asks user if they would like to run the application over again
 def WPA(): #wanna play again?
       while True:
-       Answer = st.text_input(' Would you like to play this Madlib again?: ')
+       Answer = st.text_input(' Would you like to play this Madlib again? ')
        if Answer == 'yes' or Answer == 'Yes':
         mlc()
         output.clear()
@@ -96,7 +113,7 @@ def WPA(): #wanna play again?
 
 """# *OK, we can play now!*"""
 
-st.title('Choose which madlib to play!')
+
 
 # code to play
 
