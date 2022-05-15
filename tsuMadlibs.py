@@ -25,7 +25,7 @@ madlib_choice = st.selectbox('Select a Madlib to play!', ('The Lonely Companion'
 
 ## creating user input for variables then placing the variables inside of the actual madlib story
 def madlib1():
-       with st.form(keys= 'ml1v'):
+       with st.form(key= 'ml1v'):
         noun = st.text_input(' enter a noun: ' )
         noun2 =  st.text_input(' enter another noun: ' ) 
         verb =   st.text_input('enter a verb(ing):  ' ) 
@@ -58,7 +58,7 @@ def madlib1():
        
        
 def  madlib2():
-       with st.form(keys = 'ml2v'):
+       with st.form(key = 'ml2v'):
         noun = st.text_input(' enter a noun: ' )
         cash1 =   st.text_input('enter number:  ' ) 
         cash2 =   st.text_input('enter another number:  ' )
