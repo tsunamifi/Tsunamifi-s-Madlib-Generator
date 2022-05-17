@@ -1,0 +1,2 @@
+"<a href=\"https://colab.research.google.com/github/tsunamifi/Tsunamifi-s-Madlib-Generator/blob/main/Tsunamifi's_Madlibs_Generator.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://share.streamlit.io/jkanner/streamlit-audio/main/app.py](https://share.streamlit.io/tsunamifi/tsunamifi-s-madlib-generator/main/tsuMadlibs.py))
