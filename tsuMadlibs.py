@@ -63,8 +63,8 @@ def madlib1():
         submit = st.form_submit_button('Submit')
     with Cover:
         st.image(c1)
-     if submit:
-        st.write(textwrap.fill(stry, 150))
+        if submit:
+            st.write(textwrap.fill(stry, 150))
         
    
 
